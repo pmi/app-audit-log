@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+    <link rel="stylesheet" type="text/css" data-th-href="${portal.assetUrl({'_path=styles/helloworld.css'})}">
+</head>
+
+<body>
+<div class="app-bar">
+    <img class="app-icon" data-th-src="${portal.assetUrl({'_path=icons/application.svg'})}"/>
+    <span class="app-title">Hello world tool</span>
+</div>
+<h1>Hello world</h1>
+
+<script data-th-inline="javascript">
+    /*<![CDATA[*/
+    var CONFIG = {
+        portalAssetsUrl: /*[[${adminUiAssetsUrl}]]*/,
+        appId: 'system-info'
+    };
+    /*]]>*/
+</script>
+<script type="text/javascript" data-th-src="${launcherJsUrl}"></script>
+</body>
+</html>

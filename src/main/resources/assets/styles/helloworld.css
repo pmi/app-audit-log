@@ -1,0 +1,24 @@
+.app-bar {
+    display: flex;
+    align-items: center;
+
+    background-color: #333;
+    color: #eee;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+
+    height: 44px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.app-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.app-title {
+    padding-left: 10px;
+}
