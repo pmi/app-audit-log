@@ -1,6 +1,6 @@
 var portalLib = require('/lib/xp/portal');
 var mustacheLib = require('/lib/xp/mustache');
-var xpVersion = Java.type("com.enonic.starter.admintool.VersionSupplier").get();
+var xpVersion = require('/lib/status').getXpVersion();
 
 exports.get = function (req) {
     var view = resolve('toolstarter.html');

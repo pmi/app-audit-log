@@ -2,7 +2,7 @@ package com.enonic.starter.admintool;
 
 import com.enonic.xp.server.VersionInfo;
 
-public class VersionSupplier
+public class XpVersionSupplier
 {
     public static String get()
     {
