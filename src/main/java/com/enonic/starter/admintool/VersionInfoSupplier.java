@@ -6,6 +6,7 @@ public class VersionInfoSupplier
 {
     public static String get()
     {
-        return VersionInfo.get().getVersion();
+        final VersionInfo versionInfo = VersionInfo.get();
+        return versionInfo.isSnapshot() ? Long.toString( System.currentTimeMillis() ) : versionInfo.getVersion();
     }
 }
