@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <tool xmlns="urn:enonic:xp:model:1.0">
-  <display-name>Hello world tool</display-name>
-  <description>Admin tool example</description>
+  <display-name>Admin tool starter</display-name>
+  <description>Admin tool starter kit</description>
   <allow>
     <principal>role:system.admin.login</principal>
   </allow>

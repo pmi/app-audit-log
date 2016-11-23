@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin tool starter</title>
+
+    <!-- Common style and library used by the Launcher Panel -->
+    <link rel="stylesheet" type="text/css" href="{{adminAssetsUrl}}/common/styles/_all.css">
+    <script type="text/javascript" src="{{adminAssetsUrl}}/common/lib/_all.js"></script>
+
+    <!-- App bar style -->
+    <link rel="stylesheet" type="text/css" href="{{assetsUrl}}/styles/toolstarter.css">
+</head>
+<body>
+
+<!-- App bar -->
+<div class="app-bar">
+    <div class="app-button">
+        <img class="app-icon" src="{{assetsUrl}}/icons/application.svg"/>
+        <span class="app-title">Admin tool starter</span>
+    </div>
+</div>
+
+<!-- Appends the Launcher Panel to the document body -->
+<script>
+    var CONFIG = {
+        appId: 'toolstarter'
+    };
+</script>
+<script type="text/javascript" src="{{adminAssetsUrl}}/apps/launcher/js/_all.js"></script>
+
+</body>
+</html>

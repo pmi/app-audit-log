@@ -1,17 +1,25 @@
 .app-bar {
     display: flex;
-    align-items: center;
-
     background-color: #333;
-    color: #eee;
+    color: #fff;
 
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
     text-transform: uppercase;
 
-    height: 44px;
     padding-left: 15px;
     padding-right: 10px;
+}
+
+.app-button {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.app-button:hover {
+    opacity: 0.5;
 }
 
 .app-icon {
