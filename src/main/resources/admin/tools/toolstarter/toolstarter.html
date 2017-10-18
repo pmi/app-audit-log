@@ -2,11 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <base href="{{baseHref}}">
     <title>Admin tool starter</title>
 
     <!-- Common style and library used by the Launcher Panel -->
-    <link rel="stylesheet" type="text/css" href="{{adminAssetsUrl}}/common/styles/_all.css">
-    <script type="text/javascript" src="{{adminAssetsUrl}}/common/lib/_all.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{assetsUrl}}/admin/common/styles/_all.css">
+
+    <!-- Append the Admin libraries -->
+    <script type="text/javascript" src="{{assetsUrl}}/admin/common/lib/_all.js"></script>
 
     <!-- App bar style -->
     <link rel="stylesheet" type="text/css" href="{{assetsUrl}}/styles/toolstarter.css">
@@ -28,6 +31,12 @@
         appId: 'toolstarter'
     };
 </script>
-<script type="text/javascript" src="{{adminAssetsUrl}}/apps/launcher/js/_all.js"></script>
+
+<!-- Append the Admin UI -->
+<script type="text/javascript" src="{{assetsUrl}}/admin/common/js/_all.js"></script>
+
+<!-- Append the launcher -->
+<script type="text/javascript" src="{{launcherUrl}}/bundle.js" async></script>
+
 </body>
 </html>
