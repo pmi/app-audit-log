@@ -1,11 +1,5 @@
 plugins {
-    id 'java'
-    id 'com.enonic.defaults' version '1.0.3'
-    id 'com.enonic.xp.app' version '1.0.13'
-}
-
-xp {
-    version = xpVersion
+    id 'com.enonic.xp.app' version '1.0.16'
 }
 
 app {
@@ -13,6 +7,7 @@ app {
     displayName = project.ext.displayName
     vendorName = 'Enonic AS'
     vendorUrl = 'http://enonic.com'
+    systemVersion = "${xpVersion}"
 }
 
 dependencies {
