@@ -5,22 +5,13 @@ var adminLib = require('/lib/xp/admin');
 exports.get = function (req) {
     var view = resolve('toolstarter.html');
 
-    // Variables required by the Launcher Panel
-    var baseHref = portalLib.pageUrl({
-        path: '',
-        type: 'absolute'
-    });
-    
-    var adminUrl = adminLib.getBaseUri();
-    var assetsUrl = portalLib.assetUrl({path: ""});
     var params = {
-        baseHref: baseHref,
-        adminUrl: adminUrl,
-        assetsUrl: assetsUrl,
-        launcherUrl: portalLib.assetUrl({
-            path: '/js/launcher',
-            application: 'com.enonic.xp.app.main'
-        })
+        adminUrl: adminLib.getBaseUri(),
+        assetsUrl: portalLib.assetUrl({
+            path: ''
+        }),
+        launcherPath: adminLib.getLauncherPath(),
+        launcherUrl: adminLib.getLauncherUrl()
     };
 
     return {

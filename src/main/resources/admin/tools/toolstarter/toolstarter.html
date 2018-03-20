@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <base href="{{baseHref}}">
     <title>Admin tool starter</title>
 
     <!-- Common style and library used by the Launcher Panel -->
@@ -28,15 +27,17 @@
 <script>
     var CONFIG = {
         adminUrl: '{{adminUrl}}',
-        appId: 'toolstarter'
+        appId: 'toolstarter',
+        launcherUrl: '{{launcherUrl}}'
     };
 </script>
 
 <!-- Append the Admin UI -->
 <script type="text/javascript" src="{{assetsUrl}}/admin/common/js/_all.js"></script>
 
+
 <!-- Append the launcher -->
-<script type="text/javascript" src="{{launcherUrl}}/bundle.js" async></script>
+<script type="text/javascript" src="{{launcherPath}}" async></script>
 
 </body>
 </html>
