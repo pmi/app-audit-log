@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <tool xmlns="urn:enonic:xp:model:1.0">
-  <display-name>Admin tool starter</display-name>
-  <description>Kickstart your admin tool development</description>
+  <display-name>Admin Audit Log</display-name>
+  <description>Access audit logs</description>
   <allow>
     <principal>role:system.admin.login</principal>
   </allow>
