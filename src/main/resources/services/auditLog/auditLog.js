@@ -9,7 +9,7 @@ exports.get = function (req) {
             results: connection.query({
                 query: '_parentPath="/events"'
             }).hits.map(function (hit) {
-                return connection.get(hit.id);
+                return connection.get(hit.id).event;
             })
         }
     };

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Admin tool starter</title>
+    <title>Admin audit log</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -11,6 +11,8 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
@@ -24,6 +26,7 @@
 
     <!-- App bar style -->
     <link rel="stylesheet" type="text/css" href="{{assetsUrl}}/styles/toolstarter.css">
+    <script type="text/javascript" src="{{assetsUrl}}/js/client.js"></script>
 </head>
 <body>
 
@@ -31,8 +34,14 @@
 <div class="app-bar">
     <div class="app-button">
         <img class="app-icon" src="{{assetsUrl}}/icons/application.svg"/>
-        <span class="app-title">Admin tool starter</span>
+        <span class="app-title">Admin audit log</span>
     </div>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-striped" id="table-container">
+        Fetching...
+    </table>
 </div>
 
 <!-- Appends the Launcher Panel to the document body -->
@@ -51,6 +60,10 @@
 
 <!-- Append the launcher -->
 <script type="text/javascript" src="{{launcherPath}}" async></script>
+
+<script type="text/javascript">
+    loadData(CONFIG.serviceUrl, '#table-container')
+</script>
 
 </body>
 </html>
