@@ -10,6 +10,9 @@ exports.get = function (req) {
         assetsUrl: portalLib.assetUrl({
             path: ''
         }),
+        serviceUrl: portalLib.serviceUrl({
+            service: 'auditLog'
+        }),
         launcherPath: adminLib.getLauncherPath(),
         launcherUrl: adminLib.getLauncherUrl()
     };
