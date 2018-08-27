@@ -30,3 +30,11 @@
 .app-title {
     padding-left: 10px;
 }
+
+.table tr .details {
+    display: none;
+}
+
+.table tr.expanded .details {
+    display: block;
+}

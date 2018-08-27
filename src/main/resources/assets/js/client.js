@@ -1,6 +1,16 @@
+var dateSorter = function (data1, data2) {
+    if (!data1.date) {
+        return 1;
+    } else if (!data2.date) {
+        return -1;
+    } else {
+        return new Date(data2.date).getTime() - new Date(data1.date).getTime();
+    }
+};
+
 function loadData(serviceUrl, target) {
     jQuery.get(serviceUrl, function (data) {
-        $(target).html([createHead()].concat(data.results.map(createRow)).join(''));
+        $(target).html([createHead()].concat(data.results.sort(dateSorter).map(createRow)).join(''));
     });
 }
 
@@ -11,7 +21,12 @@ var createHead = function () {
            '<th>Item ID</th>' +
            '<th>Action</th>' +
            '<th>Date</th>' +
+           '<th></th>' +
            '</tr></thead>'
+};
+
+var toggle = function (link) {
+    $(link).parents('tr').toggleClass('expanded');
 };
 
 var createRow = function (data) {
@@ -22,5 +37,7 @@ var createRow = function (data) {
            '<td>' + item.id + '</td>' +
            '<td>' + item.action + '</td>' +
            '<td>' + (data.date ? new Date(data.date).toISOString() : 'Unknown') + '</td>' +
+           '<td><a href="#" onclick="toggle(this)">Details</a></td>' +
+           '<td class="details">Details container here</td>' +
            '</tr>'
 };
